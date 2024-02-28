@@ -21,7 +21,7 @@ def Apiviews(request):
 def views_item(request):
     item= TodoSerializer(data=request.data)
     if Todo.objects.filter(**request.data).exists():
-        raise serializers.ValidationError('il exist deja')
+        raise serializers.ValidationError("""{"title": "dfghjk", "description": "zertyjé"}""")
     if item.is_valid():
         item.save()
         return Response(item.data)
