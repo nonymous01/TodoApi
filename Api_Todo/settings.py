@@ -126,3 +126,13 @@ STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Authentification
+# AUTHENTICATION_BACKENDS = [
+#     'django.contrib.auth.backends.ModelBackend',  # Utilise le backend par défaut
+    # Ajoutez votre backend personnalisé si nécessaire
+# ]
+
+# Utilisez l'e-mail comme champ d'identification
+AUTH_USER_MODEL = 'Api.User'
+# USERNAME_FIELD = 'email'
